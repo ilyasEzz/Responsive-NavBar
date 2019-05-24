@@ -2,9 +2,16 @@
   --primary: #673ab7;
   font-family: Arial, Helvetica, sans-serif;
 }
-html {
+
+body {
   height: 100%;
-  background-color: dodgerblue;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
 }
 
 .navbar {
@@ -27,7 +34,7 @@ html {
 }
 
 .navbar a:hover {
-  background-color: rgba(210, 210, 210, 0.7);
+  background-color: rgba(210, 210, 210, 0.3);
   color: #333;
 }
 
@@ -50,8 +57,34 @@ html {
   font-size: 1.5rem;
   display: block;
   transition: 0.3s;
+  float: initial;
 }
 
 .side-nav a:hover {
   color: #fff;
+}
+
+.side-nav .btn-close {
+  position: absolute;
+  padding: 10px;
+  top: 0;
+  right: 10px;
+  font-size: 36px;
+}
+
+.container {
+  transition: margin-left 0.5s;
+  padding: 20px;
+}
+
+@media (max-width: 568px) {
+  .navbar-nav {
+    display: none;
+  }
+}
+
+@media (min-width: 568px) {
+  .open-nav {
+    display: none;
+  }
 }
